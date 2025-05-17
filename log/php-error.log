@@ -1,0 +1,5 @@
+# PHP Error Log
+# --------------
+# Format: [TYPE][OrderID] Error Message
+# Example: [CUSTOMER][hilos-5678] Email failed: SMTP connect() failed
+
