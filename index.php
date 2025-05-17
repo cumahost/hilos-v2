@@ -20,7 +20,7 @@ require_once __DIR__ . '/lang/es.php';
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><?= $TEXT['welcome_title'] ?? 'Bienvenido a Hilos Rosace' ?></title>
-  <link href="../assets/css/style.css" rel="stylesheet">
+  <link href="./assets/css/style.css" rel="stylesheet">
   <!-- Font Awesome CDN -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   <!-- Favicon -->
