@@ -38,6 +38,8 @@ $CONFIG = [
     'currency' => '978',                           // ✅ Kode mata uang (978 = EUR)
     'key' => 'sq7HjrUOBfKmC576ILgskD5srU870gJ7',    // ✅ Kunci SHA256
     'gateway' => 'https://sis.redsys.es/sis/realizarPago', // ✅ Endpoint Redsys
+    'bizum_gateway' => 'https://sis.redsys.es/sis/realizarPagoBizum', // ✅ Endpoint Bizum
+    'merchant_url' => 'https://compra.hilosrosace.es/bizum-response.php', // ✅ URL Merchant
   ],
 
   // Informasi rekening transfer manual (atas nama Maria Dolores Martin)
