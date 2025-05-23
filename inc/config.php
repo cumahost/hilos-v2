@@ -31,7 +31,6 @@ $CONFIG = [
 
   // Informasi pembayaran Bizum
   'bizum' => [
-    'gateway' => 'https://sis.redsys.es/sis/realizarPago',
     'merchant' => 'hilosrosace',
     'currency' => '978', // EUR
     'merchant' => '034804666',                     // ✅ ID Merchant numerik
