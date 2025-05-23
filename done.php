@@ -63,7 +63,7 @@ require_once __DIR__ . "/inc/config.php";
       ? "Hello, my order number is $order_id"
       : "Hola, número de pedido $order_id";
 ?>
-<a href="https://wa.me/34965240207?text=<?= urlencode($whatsapp_message) ?>" target="_blank"
+<a href="https://wa.me/34696784648?text=<?= urlencode($whatsapp_message) ?>" target="_blank"
   class="w-full sm:w-1/2 bg-green-600 hover:bg-green-700 text-white py-3 rounded flex justify-center items-center gap-2">
   <i class="fab fa-whatsapp"></i> <?= $TEXT['contact_whatsapp'] ?? 'Contactar por WhatsApp' ?>
 </a>
