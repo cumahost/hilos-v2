@@ -7,6 +7,8 @@ require_once __DIR__.'/inc/config.php';
 
 if (!isset($_SESSION)) session_start();
 
+file_put_contents(__DIR__.'/log/bizum.log', date('c') . " - SESSION: " . print_r($_SESSION, true) . "\n", FILE_APPEND);
+
 $order = $_SESSION['order'] ?? null;
 
 if (!$order || !isset($order['total']) || !isset($order['order_id'])) {
