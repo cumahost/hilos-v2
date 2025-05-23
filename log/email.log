@@ -1,6 +1,0 @@
-# Email Success Log
-# -----------------
-# Format: [TYPE][OrderID] Message
-# Example: [ADMIN][hilos-1234] Email sent successfully
-[ADMIN][hilos-3582] Email sent successfully
-[CUSTOMER][hilos-3582] Email sent successfully
