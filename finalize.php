@@ -48,6 +48,13 @@ $_SESSION['subtotal'] = $subtotal;
 $_SESSION['shipping'] = $shipping_cost;
 $_SESSION['total'] = $total;
 
+// Tambahan penting agar bizum-submit.php bisa membaca data
+$_SESSION['order'] = [
+  'order_id' => $order_id,
+  'total' => $total,
+  'payment' => $metodo_pago
+];
+
 // Kirim email ke admin & customer
 require_once __DIR__ . '/mail/send_admin.php';
 require_once __DIR__ . '/mail/send_customer.php';
@@ -60,7 +67,7 @@ switch ($metodo_pago) {
 
   case 'bizum':
     header("Location: bizum-submit.php");
-    break;    
+    break;
 
   case 'transferencia':
   case 'cod':
