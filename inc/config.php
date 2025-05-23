@@ -31,11 +31,14 @@ $CONFIG = [
 
   // Informasi pembayaran Bizum
   'bizum' => [
-    'merchant_id' => '034804666',
-    'terminal_id' => '1',
-    'sha256_key' => 'sq7HjrUOBfKmC576ILgskD5srU870gJ7',
-    'bizum_gateway' => 'https://sis.redsys.es/sis/realizarPago',
-    'bizum_merchant' => 'hilosrosace',
+    'gateway' => 'https://sis.redsys.es/sis/realizarPago',
+    'merchant' => 'hilosrosace',
+    'currency' => '978', // EUR
+    'merchant' => '034804666',                     // ✅ ID Merchant numerik
+    'terminal' => '1',                             // ✅ Terminal ID
+    'currency' => '978',                           // ✅ Kode mata uang (978 = EUR)
+    'key' => 'sq7HjrUOBfKmC576ILgskD5srU870gJ7',    // ✅ Kunci SHA256
+    'gateway' => 'https://sis.redsys.es/sis/realizarPago', // ✅ Endpoint Redsys
   ],
 
   // Informasi rekening transfer manual (atas nama Maria Dolores Martin)
