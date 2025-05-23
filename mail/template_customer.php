@@ -83,8 +83,7 @@ $full_name = trim("$nombre $apellido");
       </p>
 
       <p style="font-weight: bold; margin-bottom: 0;">
-        WhatsApp: +34 696 78 46 48  <br>
-        Email: <a href="mailto:<?= $CONFIG['email'] ?>" style="color: #4e342e; text-decoration: none;"><?= $CONFIG['email'] ?></a>
+        WhatsApp: +34 696 78 46 48
       </p>
     </div>
 

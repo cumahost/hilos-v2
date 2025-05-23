@@ -34,6 +34,8 @@ $CONFIG = [
     'merchant_id' => '034804666',
     'terminal_id' => '1',
     'sha256_key' => 'sq7HjrUOBfKmC576ILgskD5srU870gJ7',
+    'bizum_gateway' => 'https://sis.redsys.es/sis/realizarPago',
+    'bizum_merchant' => 'hilosrosace',
   ],
 
   // Informasi rekening transfer manual (atas nama Maria Dolores Martin)

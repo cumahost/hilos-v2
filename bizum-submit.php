@@ -22,10 +22,10 @@ $amount = number_format($order['total'], 2, '', '') * 100;
 $params = [
   'Ds_Merchant_Amount' => (string)$amount,
   'Ds_Merchant_Order' => str_pad($order['order_id'], 12, '0', STR_PAD_LEFT),
-  'Ds_Merchant_MerchantCode' => $bizum_merchant,
-  'Ds_Merchant_Currency' => $bizum_currency,
+  'Ds_Merchant_MerchantCode' => $CONFIG['bizum']['merchant'],
+  'Ds_Merchant_Currency' => $CONFIG['bizum']['currency'],
   'Ds_Merchant_TransactionType' => '0',
-  'Ds_Merchant_Terminal' => $bizum_terminal,
+  'Ds_Merchant_Terminal' => $CONFIG['bizum']['terminal'],
   'Ds_Merchant_MerchantURL' => 'https://compra.hilosrosace.es/bizum-response.php',
   'Ds_Merchant_UrlOK' => 'https://compra.hilosrosace.es/done.php',
   'Ds_Merchant_UrlKO' => 'https://compra.hilosrosace.es/done.php',
@@ -36,7 +36,7 @@ $params = [
 
 $merchantParamsJson = json_encode($params, JSON_UNESCAPED_SLASHES);
 $merchantParams = base64_encode($merchantParamsJson);
-$signature = base64_encode(hash_hmac('sha256', $merchantParams, base64_decode($bizum_key), true));
+$signature = base64_encode(hash_hmac('sha256', $merchantParams, base64_decode($CONFIG['bizum']['key']), true));
 
 file_put_contents(__DIR__.'/log/bizum.log', date('c') . " - Params: $merchantParamsJson\n", FILE_APPEND);
 
@@ -47,7 +47,7 @@ file_put_contents(__DIR__.'/log/bizum.log', date('c') . " - Params: $merchantPar
   <title>Redirigiendo a Bizum...</title>
 </head>
 <body onload="document.forms[0].submit()">
-  <form action="<?= $bizum_gateway ?>" method="POST">
+  <form action="<?= $CONFIG['bizum']['bizum_gateway'] ?>" method="POST">
     <input type="hidden" name="Ds_SignatureVersion" value="HMAC_SHA256_V1">
     <input type="hidden" name="Ds_MerchantParameters" value="<?= $merchantParams ?>">
     <input type="hidden" name="Ds_Signature" value="<?= $signature ?>">
