@@ -1,2 +1,16 @@
 log/email.log
 log/*.log
+# Log files
+log/*.log
+
+# System files
+*.DS_Store
+Thumbs.db
+
+# IDE/editor settings
+.vscode/
+.idea/
+
+# Node/PHP deps (kalau pakai)
+node_modules/
+vendor/
